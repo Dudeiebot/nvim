@@ -1,3 +1,4 @@
+--all our custom pplugins are added here
 local plugins = {
   {
     "williamboman/mason.nvim",
