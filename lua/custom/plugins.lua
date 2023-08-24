@@ -68,5 +68,9 @@ local plugins = {
       require("core.utils").load_mappings("undotree")
     end
   },
+  {
+    "tpope/vim-fugitive",
+    event = "VeryLazy"
+  },
 }
 return plugins

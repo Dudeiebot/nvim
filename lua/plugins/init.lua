@@ -89,6 +89,7 @@ local default_plugins = {
   -- git stuff
   {
     "lewis6991/gitsigns.nvim",
+    enabled = false,
     ft = { "gitcommit", "diff" },
     init = function()
       -- load gitsigns only when a git file is opened
