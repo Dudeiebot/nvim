@@ -1,12 +1,11 @@
 `Beginners advice, you dont need to know all these command just use the CALL AS A SERVICE (CAAS) model.`
+
 Code/use as you learn
 # Easy to go noob.md for the all over your vim/nvim
 
-So practically here I am giving all the most important guide and instead of spending time surfing around for a certain command, you can certainly check it here;
+So practically here I am giving all the most important guide and instead of spending time surfing around for a certain command, you can certainly check it here
 
-## The Get to do all CMD
- 
- So get it right you can edit all the cmd to your desire taste but if you are using my setup here, then these will work and it is a good guide also
+So get it right you can edit all the cmd to your desire taste but if you are using my setup here, then these will work and it is a good guide also
 
 
 ## NVIM_TREE
@@ -21,7 +20,7 @@ You can call your nvim_tree with `(C-n) also known as ctrl n`
 For navigating with on your nvim and the tree, you can use `C-h`
 
 
-If you need other thing go check the cheatsheet here (https://github.com/nvim-tree/nvim-tree.lua)
+If you need other thing go check the cheatsheet here [cheatsheet](https://github.com/nvim-tree/nvim-tree.lua)
 
 
 ## CMD that works
