@@ -8,7 +8,8 @@ So practically here I am giving all the most important guide and instead of spen
 So get it right you can edit all the cmd to your desire taste but if you are using my setup here, then these will work and it is a good guide also
 
 
-## NVIM_TREE
+NVIM_TREE
+============
 We create a file from our nvim_tree pane with `a` and there are different thing that can be done on the nvim_tree pane also ranging from creating new folder/file to deleting it. Most importantly make sure to check where the new file or folder is created to before creating it. 
 
 A folder can be created if you add `/` at the end of the name you want to create it with.
@@ -23,8 +24,8 @@ For navigating with on your nvim and the tree, you can use `C-h`
 If you need other thing go check the cheatsheet here [cheatsheet](https://github.com/nvim-tree/nvim-tree.lua)
 
 
-## CMD that works
-
+CMD that works
+=================
 `Most importantly make sure you are in the command mode for all these to work, they wont work if you are not on the command mode`
 
 For Navigating aorund command mode, you can either use `esc` or by using `(C-c)`.
