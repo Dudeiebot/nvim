@@ -50,7 +50,7 @@ You can cut a selected text by clicking `d` once and get it pasted with `p`
 
 
 ## Key Important Note
-- We have the atleast different types of mode and some of them are visual, normal, command and insert. These mode varies on what you are trying to do.
+- We have atleast different types of mode and some of them are visual, normal, command and insert. These mode varies on what you are trying to do.
         - the normal mode (n) is everyone default mode
         - the command mode is used to run all the command
         - the visual mode (v) is just a read-only mode, you can get things selected and later yanked (also known as copy in the real world) on these mode.
