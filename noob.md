@@ -48,6 +48,11 @@ On visual mode we can copy, cut, paste and delete, copying the selected word on 
 
 You can cut a selected text by clicking `d` once and get it pasted with `p`
 
+Regarding multityping and multiple line commenting on code, I think it varies depending on where you download your setup from but these setup uses `gc` or `gd`.
+
+For multityping you highlight the required lines and`shift ;` then it displays some strings you can then follow it by `s/what-you-are-changing/the-new-changes`(these is written together with the string displayed in the insert command line). You can check for direction on youtube if these is not explainatory enough.
+
+Going to definition, you are going to use `ctrl ]` after highlighting the necessary string.
 
 ## Key Important Note
 - We have atleast different types of mode and some of them are visual, normal, command and insert. These mode varies on what you are trying to do.
