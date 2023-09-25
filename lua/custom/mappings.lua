@@ -18,7 +18,7 @@ M.dap = {
     }
   }
 }
---here a lotta mapping going through
+--debugging go
 M.dap_go = {
   plugin = true,
   n = {
