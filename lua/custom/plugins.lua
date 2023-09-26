@@ -1,4 +1,4 @@
---all our custom pplugins are added here
+--all our custom plugins are added here
 local plugins = {
   {
     "williamboman/mason.nvim",
@@ -15,7 +15,7 @@ local plugins = {
     end
   },
   {
-    "leoluz/nvim-dap-go",
+    "leoluz/nvim-dap-go", --these is not debugging, so i have to work on it 
     ft = "go",
     dependencies = "mfussenegger/nvim-dap",
     config = function(_, opts)
