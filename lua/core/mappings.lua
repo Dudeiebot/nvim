@@ -332,6 +332,13 @@ M.nvterm = {
     },
 
     -- new
+    ["<C-t>"] = {
+      function()
+        require("nvterm.terminal").new "float"
+      end,
+      "New Floating term",
+    },
+
     ["<leader>h"] = {
       function()
         require("nvterm.terminal").new "horizontal"
