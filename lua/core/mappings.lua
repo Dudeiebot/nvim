@@ -334,7 +334,7 @@ M.nvterm = {
     -- new
     ["<C-t>"] = {
       function()
-        require("nvterm.terminal").new "float"
+        require("nvterm.terminal").toggle "float"
       end,
       "New Floating term",
     },
