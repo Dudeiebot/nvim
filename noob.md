@@ -26,6 +26,13 @@ If you need other thing go check the cheatsheet here [cheatsheet](https://github
 
 CMD that works
 =================
+
+`(C-z)` will take you to the terminal and we call it suspended mode, you can use `fg` to access you buffer back.
+
+To open folders without using the nvim-tree, `<leader>sB` comes in handy and effective.
+
+To close a opened buffer we use `<leader>x` or `:bd`, but the other is more effective.
+
 `Most importantly make sure you are in the command mode for all these to work, they wont work if you are not on the command mode`
 
 For Navigating aorund command mode, you can either use `esc` or by using `(C-c)`.
@@ -53,6 +60,12 @@ Regarding multityping and multiple line commenting on code, I think it varies de
 For multityping you highlight the required lines and`shift ;` then it displays some strings you can then follow it by `s/what-you-are-changing/the-new-changes`(these is written together with the string displayed in the insert command line). You can check for direction on youtube if these is not explainatory enough.
 
 Going to definition, you are going to use `ctrl ]` after highlighting the necessary string.
+
+`Accessing floating, vertical and horizontal terminal`
+
+You can use `<leader> h or v` for accessing both vertical and horizontal and you can use `C-t` for accessing the floating terminal.
+
+`<leader>pt` is used to show hidden/opened terminal. 
 
 ## Key Important Note
 - We have atleast different types of mode and some of them are visual, normal, command and insert. These mode varies on what you are trying to do.
