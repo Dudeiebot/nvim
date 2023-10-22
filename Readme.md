@@ -20,6 +20,8 @@ Lazy help install all the plugin automatically and you can add more customs plug
 I am using the ayu_dark them here and you can configure yours here, 
 - [Theme Configuration](https://github.com/Dudeiebot/nvim/blob/master/lua/custom/chadrc.lua)
 
+You may need to clone some config like go-imports reviser  and add them to your go bin, you may have them already but Lazy will tell you to install them if they are not available 
+
 For beginners check more directional guide, [noob](https://github.com/Dudeiebot/nvim/blob/master/noob.md)
 ## Kudos
 
