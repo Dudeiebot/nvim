@@ -26,6 +26,7 @@ If you need other thing go check the cheatsheet here [cheatsheet](https://github
 
 CMD that works
 =================
+Customizing your theme is easy and you can just easily change your theme with `<leader>th`
 
 `(C-z)` will take you to the terminal and we call it suspended mode, you can use `fg` to access you buffer back.
 
@@ -65,7 +66,9 @@ Going to definition, you are going to use `ctrl ]` after highlighting the necess
 
 You can use `<leader> h or v` for accessing both vertical and horizontal and you can use `C-t` for accessing the floating terminal.
 
-`<leader>pt` is used to show hidden/opened terminal. 
+`<leader>pt` is used to show hidden/opened terminal.
+
+There is a mapping cheatsheet that can be accessed with `<leader>ch` and there are other things that you can check.
 
 ## Key Important Note
 - We have atleast different types of mode and some of them are visual, normal, command and insert. These mode varies on what you are trying to do.
