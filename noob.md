@@ -80,3 +80,5 @@ There is a mapping cheatsheet that can be accessed with `<leader>ch` and there a
 - if you are using my setup here, it do come with telescope and `(caps-lock)n(underscore)vim`tree, if you are building from scratch you can get telescope for finding files or those things called directory.
 
 - We do have stuff called jobs (it is practically you minimizing you app on your andriod), and you can certainly get back to them for sure. Don't let that bug you cause it may not be useful later on.
+
+## Some things
