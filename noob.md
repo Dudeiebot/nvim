@@ -52,9 +52,9 @@ You can navigate through your opens file window with `(C-i)` or also using the c
 
 `Most importantly make sure you are in the visual mode for all these to work, they wont work if you are not on the visual mode.`
 
-On visual mode we can copy, cut, paste and delete, copying the selected word on visual mode is called yanked and works by clicking `y` on your keyboard.
+On visual mode we can copy, cut, paste and delete, copying the selected word on visual mode is called yanked and works by clicking `y` on your keyboard or yanking a line with `yy`.
 
-You can cut a selected text by clicking `d` once and get it pasted with `p`
+You can cut a selected text by clicking `d` once and get it pasted with `p` or cut a selected line by using `dd` which equally delete it
 
 Regarding multityping and multiple line commenting on code, I think it varies depending on where you download your setup from but these setup uses `gc` or `gd`.
 
