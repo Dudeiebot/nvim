@@ -38,7 +38,7 @@ To close a opened buffer we use `<leader>x` or `:bd`, but the other is more effe
 
 For Navigating aorund command mode, you can either use `esc` or by using `(C-c)`.
 
-We have `j, k ,l and h` the navigator and getting all things in directions done, just press it to figure out which one move up, down and sideways. Understand that you can also make use of `B,W,J,K,L,H` in a way that it fastforwards word and also takes it to the back also faster but we going stadily easy peasy. Also you know what your arrow keys work also and can be actively used for navigation.
+We have `j, k ,l and h` the navigator and getting all things in directions done, just press it to figure out which one move up, down and sideways. Understand that you can also make use of `B,W,J,K,L,H` in a way that it fastforwards word and also takes it to the back also faster but we are going steadily easy peasy. Also remember that your arrow keys work also and can be actively used for navigation.(addition of number to the navigation key cna aid fast movement also and help in navigating faster like `50 j` will move 50 line downward)
 
 Split working is available also ranging from horizontal or vertical, we use `vsplit` to split vertically and `split` to get work done horizontally.
 
@@ -85,4 +85,5 @@ There is a mapping cheatsheet that can be accessed with `<leader>ch` and there a
 
 Double `d` can be used to delete a line and `dw` can be used to delete a word.
 `cw` can also be used to delete and takes you to insert mode immediately.
+
 
