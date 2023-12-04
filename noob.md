@@ -81,7 +81,8 @@ There is a mapping cheatsheet that can be accessed with `<leader>ch` and there a
 
 - We do have stuff called jobs (it is practically you minimizing you app on your andriod), and you can certainly get back to them for sure. Don't let that bug you cause it may not be useful later on.
 
-## Some things
+## Some things in CMD mode
 
-- Visual mode
-    Paste over with `op` 
+Double `d` can be used to delete a line and `dw` can be used to delete a word.
+`cw` can also be used to delete and takes you to insert mode immediately.
+
