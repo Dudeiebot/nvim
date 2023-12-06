@@ -84,6 +84,8 @@ There is a mapping cheatsheet that can be accessed with `<leader>ch` and there a
 ## Some things in CMD mode
  An easy way to remember, pka `d` as Delete and `c` as Change
 
+`dt` and `ct` followed by the lettering or symbol you want to delete can be helpful also, it will equally delete of change to the side. 
+
 Double `d` can be used to delete a line and `dw` can be used to delete a word.
 `cw` can also be used to delete and takes you to insert mode immediately.
 
