@@ -52,9 +52,9 @@ You can navigate through your opens file window with `(C-i)` or also using the c
 
 `Most importantly make sure you are in the visual mode for all these to work, they wont work if you are not on the visual mode.`
 
-On visual mode we can copy, cut, paste and delete, copying the selected word on visual mode is called yanked and works by clicking `y` on your keyboard or yanking a line with `yy`.
+On visual mode we can copy, cut, paste and delete, copying the selected word on visual mode is called yanked and works by clicking `y` on your keyboard. 
 
-You can cut a selected text by clicking `d` once and get it pasted with `p` or cut a selected line by using `dd` which equally delete it
+You can cut a selected text by clicking `d` once and get it pasted with `p`. 
 
 Regarding multityping and multiple line commenting on code, I think it varies depending on where you download your setup from but these setup uses `gc` or `gd`.
 
@@ -82,11 +82,19 @@ There is a mapping cheatsheet that can be accessed with `<leader>ch` and there a
 - We do have stuff called jobs (it is practically you minimizing you app on your andriod), and you can certainly get back to them for sure. Don't let that bug you cause it may not be useful later on.
 
 ## Some things in CMD mode
- An easy way to remember, pka `d` as Delete and `c` as Change
+ An easy way to remember, pka `d` as Delete and `c` as Change, `w` as Forward and `b` as Backward.
 
 `dt` and `ct` followed by the lettering or symbol you want to delete can be helpful also, it will equally delete of change to the side. 
 
-Double `d` can be used to delete a line and `dw` can be used to delete a word.
+ Double `d` can be used to delete a line and `dw` can be used to delete a word.
+
 `cw` can also be used to delete and takes you to insert mode immediately.
 
+`*` for moving through highlighted words
 
+`o` for below taking you to new line and `O` for above taking you to new line, also you get to be in insert mode also.
+
+ yanking a line with `yy`, you can yank a word with `ye`, you can yank matching sequence with `y%`.
+
+
+ deleting a line with `dd`, you can delete a word with `de`, you can delete matching sequence with `d%`.
