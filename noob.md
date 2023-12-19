@@ -1,5 +1,7 @@
 `Beginners advice, you dont need to know all these command just use the CALL AS A SERVICE (CAAS) model.`
 
+a video or a gitbook/blog soon
+
 Code/use as you learn
 # Easy to go noob.md for the all over your vim/nvim
 
