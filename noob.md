@@ -105,7 +105,7 @@ There is a mapping cheatsheet that can be accessed with `<leader>ch` and there a
  
  `A` takes you to the end of the line while `0` takes you to the beginning of a line and capital `I` to the beginning and putting in insert mode.
 
- `x` delete a letter.
+ `x` delete a letter, and you add nos to the back also for more deleting.
 
 ## Just there CMD
 
