@@ -84,7 +84,7 @@ There is a mapping cheatsheet that can be accessed with `<leader>ch` and there a
 - We do have stuff called jobs (it is practically you minimizing you app on your andriod), and you can certainly get back to them for sure. Don't let that bug you cause it may not be useful later on.
 
 ## Some things in CMD mode
- An easy way to remember, pka `d` as Delete and `c` as Change, `w` as Forward and `b`
+ An easy way to remember, pka `d` as Delete and `c` as Change, `w` as Forward and `b`, also `t` as to and `f` as find for finding in a sentence.
 
 `dt` and `ct` followed by the lettering or symbol you want to delete can be helpful also, it will equally delete of change to the side. 
 
@@ -107,5 +107,5 @@ There is a mapping cheatsheet that can be accessed with `<leader>ch` and there a
 
  `x` delete a letter, and you add nos to the back also for more deleting.
 
-## Just there CMD
+## Just there CMD et miscellanous things
 
