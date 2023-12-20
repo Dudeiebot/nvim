@@ -46,6 +46,8 @@ Split working is available also ranging from horizontal or vertical, we use `vsp
 
 We save our newly written file with `:w`  and quit with `:q` or maybe hard quit `:q!`.
 
+Navigating can get more easier also with the curly brackets from functions to functions, when coding.
+
 For easy access to the front of a page or the last of a page, we can click `gg` in small and `GG` in caps for navigating both beginning and ending of a line, also you can type a page nos you are looking for when trying to, for example if i am going to page 50 on my terminal i did just press `:50` and get navigated as fast as possible
 
 Also, if you dont have tmux you can use nvim term and also you can work with your terminal by adding the `!` mark, for instance checking git status will be `:!git status`. Even though I will prefer working alongside withe tmux to get all things done easier and faster accordingly.
@@ -112,4 +114,6 @@ you can use `~` to swap inbetween lowercase and uppercase and you can also add t
 
 the `.` command redo what was done last in other places.
 
-We can use `r` to replace a letter, you add the letter after clicking `r`
+We can use `r` to replace a letter, you add the letter after clicking `r`, you can add nos to it also for more efficiency and capital `R` is used for multiple  letters replacing.
+
+`shift v` followed with the curly bracket can help in full highlighting, maybe highlighting upward or downward (use `{` for upward and the other for downward).
