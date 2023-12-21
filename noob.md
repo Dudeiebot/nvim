@@ -96,7 +96,7 @@ There is a mapping cheatsheet that can be accessed with `<leader>ch` and there a
 
 `cw` can also be used to delete and takes you to insert mode immediately.
 
-`*` for moving through highlighted words
+`*` for checking instances where word are used in the file and moving through all highlighted words
 
 `o` for below taking you to new line and `O` for above taking you to new line, also you get to be in insert mode also.
 
