@@ -81,12 +81,14 @@ There is a mapping cheatsheet that can be accessed with `<leader>ch` and there a
         - the visual mode (v) is just a read-only mode, you can get things selected and later yanked (also known as copy in the real world) on these mode.
         - the insert mode is just the insert mode, the mf write mode.
 
-- if you are using my setup here, it do come with telescope and `(caps-lock)n(underscore)vim`tree, if you are building from scratch you can get telescope for finding files or those things called directory.
+- If you are using my setup here, it do come with telescope and `(caps-lock)n(underscore)vim`tree, if you are building from scratch you can get telescope for finding files or those things called directory.
 
 - We do have stuff called jobs (it is practically you minimizing you app on your andriod), and you can certainly get back to them for sure. Don't let that bug you cause it may not be useful later on.
 
 ## Some things in CMD mode
  An easy way to remember, pka `d` as Delete and `c` as Change, `w` as Forward and `b`, `t` as to and `f` as find, `b` as beginning and `e` as end.
+
+ For real this are just normal english, like `d 2 w` called delete 2 word will practically delete 2 word.
 
 `dt` and `ct` followed by the lettering or symbol you want to delete can be helpful also, it will equally delete of change to the side. 
 
@@ -98,10 +100,10 @@ There is a mapping cheatsheet that can be accessed with `<leader>ch` and there a
 
 `o` for below taking you to new line and `O` for above taking you to new line, also you get to be in insert mode also.
 
- yanking a line with `yy`, you can yank a word with `ye`, you can yank matching sequence with `y%`.
+ Yanking a line with `yy`, you can yank a word with `ye`, you can yank matching sequence with `y%`.
 
 
- deleting a line with `dd`, you can delete a word with `de`, you can delete matching sequence with `d%`.
+ Deleting a line with `dd`, you can delete a word with `de`, you can delete matching sequence with `d%`.
  
  `zz` to centre your cursor.
  
@@ -109,8 +111,9 @@ There is a mapping cheatsheet that can be accessed with `<leader>ch` and there a
 
  `x` delete a letter, and you add nos to the back also for more deleting.
 
+ `%` comes in handy in between brackets to flip around them, you can move from the bracket opening `{` to the bracket close `}` with the sign. Or around other brackets also.
 ## Just some CMD et miscellanous things
-You can use `~` to swap inbetween lowercase and uppercase and you can also add those numerals to it for more effectiveness.
+you can use `~` to swap inbetween lowercase and uppercase and you can also add those numerals to it for more effectiveness.
 
 The `.` command redo what was done last in other places.
 
