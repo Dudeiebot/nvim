@@ -9,7 +9,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
-vim.keymap.set("i", "<C-c>", "<Esc>")
+vim.keymap.set("i", "<C-c>", "<Esc>")  --[[ probably going to change my escape status]]
 
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
