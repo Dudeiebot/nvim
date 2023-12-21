@@ -123,6 +123,8 @@ We can use `r` to replace a letter, you add the letter after clicking `r`, you c
 
 Indenting can be done with `< >` twice, also you can indent multiple line with `< >` once and also add numerals ot the back for more efficiency.
 
+`/` can be used to search and we can use `n` to check for all instance forward and `N` for all instance backwards.
+
 ## Macros
 
 You can record a set of commands on a key and make use of it on more set of lines, So firstly you click `q` followed by the key you want the command to be saved on.
