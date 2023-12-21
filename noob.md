@@ -110,10 +110,12 @@ There is a mapping cheatsheet that can be accessed with `<leader>ch` and there a
  `x` delete a letter, and you add nos to the back also for more deleting.
 
 ## Just some CMD et miscellanous things
-you can use `~` to swap inbetween lowercase and uppercase and you can also add those numerals to it for more effectiveness.
+You can use `~` to swap inbetween lowercase and uppercase and you can also add those numerals to it for more effectiveness.
 
-the `.` command redo what was done last in other places.
+The `.` command redo what was done last in other places.
 
 We can use `r` to replace a letter, you add the letter after clicking `r`, you can add nos to it also for more efficiency and capital `R` is used for multiple  letters replacing.
 
 `shift v` followed with the curly bracket can help in full highlighting, maybe highlighting upward or downward (use `{` for upward and the other for downward).
+
+Indenting can be done with `>` twice, also you can indent multiple line with `>` once and also add numerals ot the back for more efficiency.
