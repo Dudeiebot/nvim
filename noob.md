@@ -118,4 +118,12 @@ We can use `r` to replace a letter, you add the letter after clicking `r`, you c
 
 `shift v` followed with the curly bracket can help in full highlighting, maybe highlighting upward or downward (use `{` for upward and the other for downward).
 
-Indenting can be done with `>` twice, also you can indent multiple line with `>` once and also add numerals ot the back for more efficiency.
+Indenting can be done with `< >` twice, also you can indent multiple line with `< >` once and also add numerals ot the back for more efficiency.
+
+## Macros
+
+You can record a set of commands on a key and make use of it on more set of lines, So firstly you click `q` followed by the key you want the command to be saved on.
+
+You can also end it with `q`, and start using the macros with `@` followed by the key you recorded to.
+
+The macro follow the pattern in which the key is recorded to get things done, always remember that.
