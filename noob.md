@@ -113,7 +113,7 @@ There is a mapping cheatsheet that can be accessed with `<leader>ch` and there a
 
  `%` comes in handy in between brackets to flip around them, you can move from the bracket opening `{` to the bracket close `}` with the sign. Or around other brackets also.
 ## Just some CMD et miscellanous things
-you can use `~` to swap inbetween lowercase and uppercase and you can also add those numerals to it for more effectiveness.
+you can use `~` to swap in between lowercase and uppercase and you can also add those numerals to it for more effectiveness.
 
 The `.` command redo what was done last in other places.
 
