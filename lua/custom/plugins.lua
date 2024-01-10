@@ -73,5 +73,9 @@ local plugins = {
     "tpope/vim-fugitive",
     event = "VeryLazy"
   },
+  {
+    "wakatime/vim-wakatime",
+    event = "VeryLazy"
+  },
 }
 return plugins
