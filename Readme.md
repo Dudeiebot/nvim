@@ -1,7 +1,7 @@
 Overview
 ============
 
-Here is my neovim config, it is configured to make coding easier and faster with golang.
+Here is my neovim config, it is configured to make coding easier and faster.
 
 ## Installation
 
