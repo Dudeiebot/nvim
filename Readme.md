@@ -19,7 +19,7 @@ Lazy help install all the plugin automatically and you can add more customs plug
 
 You may need to clone some config like go-imports reviser  and add them to your go bin, you may have them already but Lazy will tell you to install them if they are not available 
 
-For beginners check more directional guide, [noob](http://excelojo.com/journal/regrading_nvim/)
+For beginners check more directional guide, [noob](http://excelojo.com/journal/regarding_nvim/)
 ## Kudos
 
 - [NVChad](https://github.com/NvChad/NvChad)
