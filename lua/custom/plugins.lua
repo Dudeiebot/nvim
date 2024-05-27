@@ -4,6 +4,7 @@ local plugins = {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        "pyright",
         "gopls",
       },
     },
@@ -32,7 +33,7 @@ local plugins = {
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
-    ft = "go",
+    ft = {"go"},
     opts = function()
       return require "custom.configs.null-ls"
     end
@@ -76,6 +77,9 @@ local plugins = {
   {
     "wakatime/vim-wakatime",
     event = "VeryLazy"
+  },
+  {
+    
   },
 }
 return plugins
