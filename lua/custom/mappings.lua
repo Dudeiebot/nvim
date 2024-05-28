@@ -5,20 +5,21 @@ M.dap = {
   plugin = true,
   n = {
     ["<leader>db"] = {
-      "<cmd> DapToggleBreakpoint <CR>",
+      "<cmd>DapToggleBreakpoint<CR>",
       "Add breakpoint at line"
     },
     ["<leader>dus"] = {
-      function ()
-        local widgets = require('dap.ui.widgets');
-        local sidebar = widgets.sidebar(widgets.scopes);
-        sidebar.open();
+      function()
+        local widgets = require('dap.ui.widgets')
+        local sidebar = widgets.sidebar(widgets.scopes)
+        sidebar.open()
       end,
       "Open debugging sidebar"
     }
   }
 }
---debugging go
+
+-- Debugging Go
 M.dap_go = {
   plugin = true,
   n = {
@@ -41,11 +42,11 @@ M.gopher = {
   plugin = true,
   n = {
     ["<leader>gsj"] = {
-      "<cmd> GoTagAdd json <CR>",
+      "<cmd>GoTagAdd json<CR>",
       "Add json struct tags"
     },
     ["<leader>gsy"] = {
-      "<cmd> GoTagAdd yaml <CR>",
+      "<cmd>GoTagAdd yaml<CR>",
       "Add yaml struct tags"
     }
   }
@@ -55,9 +56,22 @@ M.undotree = {
   plugin = true,
   n = {
     ["<leader>fu"] = {
-      ":UndotreeToggle <CR>",
-      "undotree"
+      "<cmd>UndotreeToggle<CR>",
+      "Toggle undotree"
     }
   }
 }
+
+M.dap_python = {
+  plugin = true,
+  n = {
+    ["<leader>dpr"] = {
+      function()
+        require('dap-python').test_method()
+      end,
+      "Debug python test method"
+    }
+  }
+}
+
 return M

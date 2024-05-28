@@ -1,41 +1,83 @@
 --all our custom plugins are added here
 local plugins = {
   {
+    "nvim-neotest/nvim-nio",
+  },
+  {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        "pyright",
         "gopls",
+        "black",
+        "debugpy",
+        "mypy",
+        "ruff-lsp",
+        "delve",
       },
     },
   },
+  -- look into the debugging
   {
     "mfussenegger/nvim-dap",
-    init = function()
+    config = function()
       require("core.utils").load_mappings("dap")
     end
+  },
+ {
+    "rcarriga/nvim-dap-ui",
+    dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"},
+    config = function()
+      local dap = require("dap")
+      local dapui = require("dapui")
+      dapui.setup()
+      dap.listeners.after.event_initialized["dapui_config"] = function()
+        dapui.open()
+      end
+      dap.listeners.before.event_terminated["dapui_config"] = function()
+        dapui.close()
+      end
+      dap.listeners.before.event_exited["dapui_config"] = function()
+        dapui.close()
+      end
+    end
+  },
+  {
+    "mfussenegger/nvim-dap-python",
+    ft = "python",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "rcarriga/nvim-dap-ui",
+      "nvim-neotest/nvim-nio",
+    },
+    config = function()
+      local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
+      require("dap-python").setup(path)
+      require("core.utils").load_mappings("dap_python")
+    end,
   },
   {
     "leoluz/nvim-dap-go", --these is not debugging, so i have to work on it 
     ft = "go",
-    dependencies = "mfussenegger/nvim-dap",
+    dependencies = { "mfussenegger/nvim-dap", "rcarriga/nvim-dap-ui", "nvim-neotest/nvim-nio" },
     config = function(_, opts)
       require("dap-go").setup(opts)
       require("core.utils").load_mappings("dap_go")
-    end
+    end,
   },
   {
     "neovim/nvim-lspconfig",
     config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
-    end
+    end,
   },
   {
-    "jose-elias-alvarez/null-ls.nvim",
-    ft = "go",
+    "nvimtools/none-ls.nvim",
+    ft = {"go", "python"},
     opts = function()
       return require "custom.configs.null-ls"
-    end
+    end,
   },
   {
     "olexsmir/gopher.nvim",
@@ -46,7 +88,7 @@ local plugins = {
     end,
     build = function()
       vim.cmd [[silent! GoInstallDeps]]
-    end
+    end,
   },
   {
     "nvim-telescope/telescope-file-browser.nvim",
