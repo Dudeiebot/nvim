@@ -1,8 +1,16 @@
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 
-local lspconfig = require("lspconfig")
+local lspconfig = require ("lspconfig")
 local util = require "lspconfig/util"
+
+local function organize_imports()
+  local param = {
+    command = "_typescript.organizeImports",
+    arguments = {vim.api.nvim_buf_get_name(0)},
+  }
+  vim.lsp.buf.execute_command(param)
+end
 
 lspconfig.gopls.setup {
   on_attach = on_attach,
@@ -31,5 +39,25 @@ for _, lsp in ipairs(servers) do
     on_attach = on_attach,
     capabilities = capabilities,
     filetypes = {"python"},
-  })
+})
 end
+
+-- nvim-lsp config (:help lspconfig-all)
+lspconfig.tsserver.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    cmd = { "typescript-language-server", "--stdio" },
+    filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
+    root_dir = util.root_pattern("tsconfig.json", "jsconfig.json", "package.json", ".git"),
+    init_options = {
+      preferences = {
+        disableSuggestions = true,
+      },
+    },
+    command = {
+      OrganizeImports = {
+        organize_imports,
+        description = "Organize Imports"
+      }
+    }
+  }
