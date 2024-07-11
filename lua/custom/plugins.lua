@@ -14,6 +14,9 @@ local plugins = {
         "mypy",
         "ruff-lsp",
         "delve",
+        "typescript-language-server",
+        "eslint-lsp",
+        "prettier"
       },
     },
   },
@@ -72,13 +75,19 @@ local plugins = {
       require "custom.configs.lspconfig"
     end,
   },
+
+  --fornatters
   {
     "nvimtools/none-ls.nvim",
-    ft = {"go", "python"},
+    ft = {"go", "python", "javascript", "javascriptreact", "typescript", "typescriptreact" },
+    dependencies = {
+      "nvimtools/none-ls-extras.nvim",
+    },
     opts = function()
       return require "custom.configs.null-ls"
     end,
   },
+
   {
     "olexsmir/gopher.nvim",
     ft = "go",
