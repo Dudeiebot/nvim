@@ -119,5 +119,28 @@ local plugins = {
     "wakatime/vim-wakatime",
     event = "VeryLazy"
   },
+  {
+    "iamcco/markdown-preview.nvim",
+    keys = {
+    {
+        "<leader>md",
+        "<cmd>MarkdownPreview<CR>",
+        desc = "MarkdownPreview",
+      },
+    {
+        "<leader>ms",
+        "<cmd>MarkdownPreviewStop<CR>",
+        desc = "MarkdownPreviewStop",
+      },
+    {
+        "<leader>mt",
+        "<cmd>MarkdownPreviewToggle<CR>",
+        desc = "MarkdownPreviewToggle",
+      },
+    },
+     ft = { "markdown" },
+     build = function() vim.fn["mkdp#util#install"]()
+    end,
+  },
 }
 return plugins
