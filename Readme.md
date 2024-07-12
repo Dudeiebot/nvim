@@ -3,6 +3,11 @@ Overview
 
 Here is my neovim config, it is configured to make coding easier and faster.
 
+`Golang`
+`Javascript`
+`Typescript`
+`Python`   and more to come
+
 ## Installation
 
 - [Neovim Installation](https://github.com/neovim/neovim/wiki/Installing-Neovim)
