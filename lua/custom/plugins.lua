@@ -16,6 +16,7 @@ local plugins = {
         "delve",
         "typescript-language-server",
         "eslint-lsp",
+        "eslint_d",
         "prettier"
       },
     },
