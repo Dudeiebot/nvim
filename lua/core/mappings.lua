@@ -306,6 +306,9 @@ M.nvterm = {
       end,
       "Toggle vertical term",
     },
+
+    -- mapping esc key to the returning of terminal mode to normal mode
+    ["<Esc>"] = { "<C-\\><C-n>", "Exit terminal mode" },
   },
 
   n = {
