@@ -31,7 +31,7 @@ lspconfig.gopls.setup {
 
 local servers = {
   "pyright",
-  "ruff_lsp",
+  "ruff",
 }
 
 for _, lsp in ipairs(servers) do
@@ -43,7 +43,7 @@ for _, lsp in ipairs(servers) do
 end
 
 -- nvim-lsp config (:help lspconfig-all)
-lspconfig.tsserver.setup {
+lspconfig.ts_ls.setup {
     on_attach = on_attach,
     capabilities = capabilities,
     cmd = { "typescript-language-server", "--stdio" },
