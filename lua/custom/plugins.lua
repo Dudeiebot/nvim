@@ -21,7 +21,7 @@ local plugins = {
       },
     },
   },
-  -- look into the debugging
+
   {
     "mfussenegger/nvim-dap",
     config = function()
@@ -61,7 +61,7 @@ local plugins = {
     end,
   },
   {
-    "leoluz/nvim-dap-go", --these is not debugging, so i have to work on it 
+    "leoluz/nvim-dap-go",
     ft = "go",
     dependencies = { "mfussenegger/nvim-dap", "rcarriga/nvim-dap-ui", "nvim-neotest/nvim-nio" },
     config = function(_, opts)
@@ -77,7 +77,7 @@ local plugins = {
     end,
   },
 
-  --fornatters
+  --formatters
   {
     "nvimtools/none-ls.nvim",
     ft = {"go", "python", "javascript", "javascriptreact", "typescript", "typescriptreact" },
@@ -152,5 +152,12 @@ local plugins = {
      build = function() vim.fn["mkdp#util#install"]()
     end,
   },
+  {
+      "supermaven-inc/supermaven-nvim",
+      event = { "InsertEnter" },
+      config = function()
+        require("supermaven-nvim").setup({})
+      end,
+    },
 }
 return plugins
