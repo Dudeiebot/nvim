@@ -15,7 +15,12 @@ M.dap = {
         sidebar.open()
       end,
       "Open debugging sidebar"
-    }
+    },
+    ["<leader>dc"] = { "<cmd>DapContinue<CR>", "Continue" },
+    ["<leader>dx"] = { "<cmd>DapTerminate<CR>", "Terminate" },
+    ["<leader>do"] = { "<cmd>DapStepOver<CR>", "Step over" },
+    ["<leader>di"] = { "<cmd>DapStepInto<CR>", "Step into" },
+    ["<leader>dO"] = { "<cmd>DapStepOut<CR>", "Step out" }
   }
 }
 
