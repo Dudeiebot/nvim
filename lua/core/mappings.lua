@@ -34,7 +34,6 @@ M.general = {
     ["<leader>rn"] = { "<cmd> set rnu! <CR>", "Toggle relative number" },
 
     -- Allow moving the cursor through wrapped lines with j, k, <Up> and <Down>
-    -- http://www.reddit.com/r/vim/comments/2k4cbr/problem_with_gj_and_gk/
     -- empty mode is same as using <cmd> :map
     -- also don't use g[j|k] when in operator pending mode, so it doesn't alter d, y or c behaviour
     ["j"] = { 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', "Move down", opts = { expr = true } },
@@ -124,8 +123,6 @@ M.comment = {
 
 M.lspconfig = {
   plugin = true,
-
-  -- See `<cmd> :help vim.lsp.*` for documentation on any of the below functions
 
   n = {
     ["gD"] = {
