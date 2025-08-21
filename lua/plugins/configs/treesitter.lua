@@ -1,5 +1,5 @@
 local options = {
-  ensure_installed = { "c", "go", "rust", "lua", "vim", "vimdoc", "query", "typescript", "javascript", "python"},
+ ensure_installed = { "c", "go", "rust", "lua", "vim", "vimdoc", "query", "typescript", "javascript", "python", "html", "css", "tsx", "typst"},
 
   highlight = {
     enable = true,
@@ -7,6 +7,7 @@ local options = {
   },
 
   indent = { enable = true },
+  fold = { enable = true },
 }
 
 return options
