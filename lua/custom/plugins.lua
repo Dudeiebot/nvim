@@ -11,6 +11,7 @@ local plugins = {
         "gopls",
         "black",
         "debugpy",
+        "tinymist",
         "mypy",
         "ruff-lsp",
         "delve",
@@ -153,11 +154,47 @@ local plugins = {
     end,
   },
   {
-      "supermaven-inc/supermaven-nvim",
-      event = { "InsertEnter" },
-      config = function()
-        require("supermaven-nvim").setup({})
-      end,
-    },
+    "supermaven-inc/supermaven-nvim",
+    event = { "InsertEnter" },
+    config = function()
+      require("supermaven-nvim").setup({
+        keymaps = {
+          accept_suggestion = "<C-q>",
+          clear_suggestion = "<C-]>",
+          accept_word = "<C-j>",
+        },
+        disable_inline_completion = false,
+        disable_keymaps = false, 
+      })
+    end,
+  },
+    {
+    'kevinhwang91/nvim-ufo',
+    dependencies = 'kevinhwang91/promise-async',
+    event = 'BufReadPost',
+    config = function()
+      require('ufo').setup({
+        provider_selector = function(bufnr, filetype, buftype)
+          return {'treesitter', 'indent'}
+        end
+      })
+      vim.o.foldcolumn = '1'
+      vim.o.foldlevel = 99
+      vim.o.foldlevelstart = 99
+      vim.o.foldenable = true
+      vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
+      vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
+    end
+  },
+  {
+    'chomosuke/typst-preview.nvim',
+    ft = 'typst',
+    version = '1.*',
+    opts = {},
+    config = function()
+      require('typst-preview').setup({})
+      vim.keymap.set('n', '<leader>tp', ':TypstPreview<CR>', { buffer = true, desc = 'Typst Preview' })
+    end,
+  },
 }
 return plugins

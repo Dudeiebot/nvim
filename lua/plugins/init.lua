@@ -90,9 +90,8 @@ local default_plugins = {
   {
     "lewis6991/gitsigns.nvim",
     enabled = false,
-    ft = { "gitcommit", "diff" },
+    lazy = false,
     init = function()
-      -- load gitsigns only when a git file is opened
       vim.api.nvim_create_autocmd({ "BufRead" }, {
         group = vim.api.nvim_create_augroup("GitSignsLazyLoad", { clear = true }),
         callback = function()

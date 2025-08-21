@@ -61,3 +61,15 @@ lspconfig.ts_ls.setup {
       }
     }
   }
+
+lspconfig.tinymist.setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+  cmd = {"tinymist"},
+  filetypes = {"typst"},
+  settings = {
+    formatterMode = "typstyle",
+    exportPdf = "onType",
+    semanticTokens = "disable"
+  }
+}

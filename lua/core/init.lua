@@ -22,6 +22,16 @@ opt.smartindent = true
 opt.tabstop = 2
 opt.softtabstop = 2
 
+-- Folding 
+-- opt.foldmethod = 'expr'
+-- opt.foldexpr = 'nvim_treesitter#foldexpr()'
+-- opt.foldenable = false
+-- opt.foldlevelstart = 99
+-- opt.foldcolumn = "0"
+--
+-- opt.fillchars:append({ fold = " ", foldopen = "v", foldclose = ">", foldsep = " " })
+-- opt.number = true
+
 opt.fillchars = { eob = " " }
 opt.ignorecase = true
 opt.smartcase = true
