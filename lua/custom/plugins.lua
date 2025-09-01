@@ -224,12 +224,12 @@ local plugins = {
       }):find()
     end
 
-    vim.keymap.set("n", "<leader>h", function() toggle_telescope(harpoon:list()) end,
+    vim.keymap.set("n", "<leader>gh", function() toggle_telescope(harpoon:list()) end,
         { desc = "Open harpoon window" })
   end,
   keys = {
-    { "<leader>A", function() require("harpoon"):list():add() end, desc = "harpoon file" },
-    { "<leader>a", function() local harpoon = require("harpoon") harpoon.ui:toggle_quick_menu(harpoon:list()) end, desc = "harpoon quick menu" },
+    { "<leader>a", function() require("harpoon"):list():add() end, desc = "harpoon file" },
+    { "<leader>u", function() local harpoon = require("harpoon") harpoon.ui:toggle_quick_menu(harpoon:list()) end, desc = "harpoon quick menu" },
     { "<leader>1", function() require("harpoon"):list():select(1) end, desc = "harpoon to file 1" },
     { "<leader>2", function() require("harpoon"):list():select(2) end, desc = "harpoon to file 2" },
     { "<leader>3", function() require("harpoon"):list():select(3) end, desc = "harpoon to file 3" },
