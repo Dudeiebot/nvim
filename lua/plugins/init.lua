@@ -259,6 +259,42 @@ local default_plugins = {
       require("which-key").setup(opts)
     end,
   },
+   {
+    "goolord/alpha-nvim",
+    lazy = false,
+    config = function()
+      local alpha = require("alpha")
+      local dashboard = require("alpha.themes.dashboard")
+
+    dashboard.section.header.val = {
+      "                                                ",
+      "    ,---,                                       ",
+      "  .'  .' `\\                     ,---,           ",
+      ",---.'     \\          ,--,    ,---.'|           ",
+      "|   |  .`\\  |       ,'_ /|    |   | :           ",
+      ":   : |  '  |  .--. |  | :    |   | |   ,---.   ",
+      "|   ' '  ;  :,'_ /| :  . |  ,--.__| |  /     \\  ",
+      "'   | ;  .  ||  ' | |  . . /   ,'   | /    /  | ",
+      "|   | :  |  '|  | ' |  | |.   '  /  |.    ' / | ",
+      "'   : | /  ; :  | : ;  ; |'   ; |:  |'   ;   /| ",
+      "|   | '` ,/  '  :  `--'   \\   | '/  ''   |  / | ",
+      ";   :  .'    :  ,      .-./   :    :||   :    | ",
+      "|   ,.'       `--`----'    \\   \\  /   \\   \\  /  ",
+      "'---'                       `----'     `----'   ",
+      "                                                ",
+    }
+
+      dashboard.section.buttons.val = {
+        dashboard.button("e", "  New File", ":ene <BAR> startinsert<CR>"),
+        dashboard.button("f", "󰈞  Find File", ":Telescope find_files<CR>"),
+        dashboard.button("r", "  Recent Files", ":Telescope oldfiles<CR>"),
+        dashboard.button("q", "󰅚  Quit NVIM", ":qa<CR>"),
+      }
+
+      -- Load with default settings
+      alpha.setup(dashboard.opts)
+    end,
+  },
 }
 
 local config = require("core.utils").load_config()
