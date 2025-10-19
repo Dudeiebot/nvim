@@ -235,6 +235,23 @@ local plugins = {
     { "<leader>3", function() require("harpoon"):list():select(3) end, desc = "harpoon to file 3" },
     { "<leader>4", function() require("harpoon"):list():select(4) end, desc = "harpoon to file 4" },
   },
+},
+{
+    "kdheepak/lazygit.nvim",
+    lazy = true,
+    cmd = {
+        "LazyGit",
+        "LazyGitConfig",
+        "LazyGitCurrentFile",
+        "LazyGitFilter",
+        "LazyGitFilterCurrentFile",
+    },
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+    },
+    keys = {
+        { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
+    }
 }
 }
 return plugins
