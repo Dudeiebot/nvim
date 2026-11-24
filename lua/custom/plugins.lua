@@ -18,7 +18,8 @@ local plugins = {
         "typescript-language-server",
         "eslint-lsp",
         "eslint_d",
-        "prettier"
+        "prettier",
+        "rust-analyzer"
       },
     },
   },
@@ -252,6 +253,30 @@ local plugins = {
     keys = {
         { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
     }
+},
+{
+    "Dudeiebot/askia",
+    dir = "/Users/Dudeshii/WDUDE/asking",
+    main = "askia",
+    cmd = {
+        "Ask", "AskFollow", "AskCancel", "AskToggle", "AskClose",
+        "AskReset", "AskAdd", "AskClear", "AskInfo", "AskTerminal",
+    },
+    keys = {
+        { "<leader>ka", ":Ask<CR>", mode = { "n", "x" }, silent = true, desc = "Ask Claude about code" },
+        { "<leader>kf", ":AskFollow ", mode = "n", desc = "Ask Claude follow-up" },
+        { "<leader>kt", "<cmd>AskToggle<CR>", mode = "n", silent = true, desc = "Toggle the Claude answer window" },
+        { "<leader>kc", "<cmd>AskClose<CR>", mode = "n", silent = true, desc = "Close answer + discard" },
+        { "<leader>kr", "<cmd>AskReset<CR>", mode = "n", silent = true, desc = "Forget project's Claude session" },
+        { "<leader>kx", "<cmd>AskCancel<CR>", mode = "n", silent = true, desc = "Cancel in-flight Ask" },
+        { "<leader>kd", ":AskAdd<CR>", mode = { "n", "x" }, silent = true, desc = "Attach selection/function as reference" },
+        { "<leader>kl", "<cmd>AskClear<CR>", mode = "n", silent = true, desc = "Drop all attached references" },
+        { "<leader>ki", "<cmd>AskInfo<CR>", mode = "n", silent = true, desc = "Show project's Claude session info" },
+        { "<leader>ke", "<cmd>AskTerminal<CR>", mode = "n", silent = true, desc = "Open session in interactive terminal" },
+    },
+    opts = {
+        model = "sonnet", -- faster for one-shot "explain this" calls
+    },
 }
 }
 return plugins
