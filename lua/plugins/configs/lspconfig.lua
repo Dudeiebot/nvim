@@ -1,6 +1,8 @@
 dofile(vim.g.base46_cache .. "lsp")
 require "nvchad.lsp"
 
+vim.g.lspconfig_deprecation_warnings = false
+
 local M = {}
 local utils = require "core.utils"
 
@@ -41,7 +43,7 @@ M.capabilities.textDocument.completion.completionItem = {
   },
 }
 
-require("lspconfig").lua_ls.setup {
+vim.lsp.config("lua_ls", {
   on_attach = M.on_attach,
   capabilities = M.capabilities,
 
@@ -62,6 +64,7 @@ require("lspconfig").lua_ls.setup {
       },
     },
   },
-}
+})
+vim.lsp.enable("lua_ls")
 
 return M
