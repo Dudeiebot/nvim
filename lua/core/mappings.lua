@@ -305,7 +305,7 @@ M.nvterm = {
     },
 
     -- mapping esc key to the returning of terminal mode to normal mode
-    ["<Esc>"] = { "<C-\\><C-n>", "Exit terminal mode" },
+    ["<A-Esc>"] = { "<C-\\><C-n>", "Exit terminal mode" },
   },
 
   n = {
