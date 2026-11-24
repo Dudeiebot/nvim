@@ -78,6 +78,11 @@ M.dap_python = {
     }
   }
 }
-
+M.disabled = {
+  t = {
+    ["<Esc>"] = ""
+  }
+}
 
 return M
+
