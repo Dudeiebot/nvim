@@ -1,8 +1,7 @@
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 
-local lspconfig = require ("lspconfig")
-local util = require "lspconfig/util"
+-- util is no longer needed as we use native root_markers
 
 local function organize_imports()
   local param = {
@@ -12,12 +11,13 @@ local function organize_imports()
   vim.lsp.buf.execute_command(param)
 end
 
-lspconfig.gopls.setup {
+-- Gopls configuration
+vim.lsp.config("gopls", {
   on_attach = on_attach,
   capabilities = capabilities,
   cmd = {"gopls"},
   filetypes = { "go", "gomod", "gowork", "gotmpl" },
-  root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+  root_markers = { "go.work", "go.mod", ".git" },
   settings = {
     gopls = {
       completeUnimported = true,
@@ -27,42 +27,47 @@ lspconfig.gopls.setup {
       },
     },
   },
-}
+})
+vim.lsp.enable("gopls")
 
-local servers = {
+-- Python configurations (Pyright and Ruff)
+local python_servers = {
   "pyright",
   "ruff",
 }
 
-for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup({
+for _, lsp in ipairs(python_servers) do
+  vim.lsp.config(lsp, {
     on_attach = on_attach,
     capabilities = capabilities,
     filetypes = {"python"},
-})
+  })
+  vim.lsp.enable(lsp)
 end
 
--- nvim-lsp config (:help lspconfig-all)
-lspconfig.ts_ls.setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-    cmd = { "typescript-language-server", "--stdio" },
-    filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
-    root_dir = util.root_pattern("tsconfig.json", "jsconfig.json", "package.json", ".git"),
-    init_options = {
-      preferences = {
-        disableSuggestions = true,
-      },
+-- Typescript/Javascript configuration
+vim.lsp.config("ts_ls", {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { "typescript-language-server", "--stdio" },
+  filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
+  root_markers = { "tsconfig.json", "jsconfig.json", "package.json", ".git" },
+  init_options = {
+    preferences = {
+      disableSuggestions = true,
     },
-    command = {
-      OrganizeImports = {
-        organize_imports,
-        description = "Organize Imports"
-      }
+  },
+  command = {
+    OrganizeImports = {
+      organize_imports,
+      description = "Organize Imports"
     }
   }
+})
+vim.lsp.enable("ts_ls")
 
-lspconfig.tinymist.setup {
+-- Tinymist (Typst) configuration
+vim.lsp.config("tinymist", {
   capabilities = capabilities,
   on_attach = on_attach,
   cmd = {"tinymist"},
@@ -72,4 +77,22 @@ lspconfig.tinymist.setup {
     exportPdf = "onType",
     semanticTokens = "disable"
   }
-}
+})
+vim.lsp.enable("tinymist")
+
+-- Rust Analyzer configuration
+vim.lsp.config("rust_analyzer", {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { "rust-analyzer" },
+  filetypes = {"rust"},
+  root_markers = { "Cargo.toml", "rust-project.json" },
+  settings = {
+    ["rust-analyzer"] = {
+      cargo = {
+        allFeatures = true,
+      },
+    },
+  },
+})
+vim.lsp.enable("rust_analyzer")
